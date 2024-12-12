@@ -1,0 +1,52 @@
+[package]
+name = "QubitCrypt"
+version = "0.3.0"
+edition = "2021"
+authors = ["Seventh Sense AI"]
+license = "Apache-2.0 OR MIT"
+rust-version = "1.77.1"
+readme = "README.md"
+categories = ["cryptography", "algorithms"]
+keywords = ["crypto", "pqc", "post-quantum", "ML-KEM", "ML-DSA"]
+description = "Library for post-quantum cryptography and PKI"
+
+[lib]
+crate-type = ["lib", "cdylib", "staticlib"]
+name = "qubitcrypt"
+
+[dependencies]
+ml-kem = { version="0.2.1", features=["deterministic"]}
+rand = "0.8.5"
+rand_chacha = "0.3.1"
+rand_core = "0.6.4"
+rsa = { version="0.9.6", features=["sha2"] }
+openssl = { version = "0.10.68", features = ["vendored"] }
+sha2 = "0.10.8"
+der = "0.7.9"
+pkcs8 = "0.10.2"
+der_derive = "0.7.3"
+sha3 = "0.10.8"
+hkdf = "0.12.4"
+hex = "0.4.3"
+fips204 = { package = "fips204", version = "0.4.3" }
+fips205 = { package = "fips205", version = "0.4.0" }
+ed25519-dalek = { version="2.1.1", features=["rand_core"]}
+ed448-rust = "0.1.1"
+pem = "3.0.4"
+x509-cert = { version="0.2.5", features=["builder"]}
+serde = "1.0.210"
+strum = "0.26.3"
+strum_macros = "0.26.4"
+zeroize = "1.8.1"
+chrono = "0.4.38"
+thiserror = "1.0.64"
+signature = "2.2.0"
+tiny-keccak = {version="2.0.2", features=["kmac"]}
+cms = {version="0.2.3", features=["builder", "alloc"]}
+spki = "0.7.3"
+const-oid = "0.9.6"
+
+
+
+
+
